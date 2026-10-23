@@ -73,21 +73,29 @@ python main.py --file data/sample_report.md
 python main.py --file data/sample_sales.csv
 ```
 
+### Web UI (optional)
+Prefer a browser? Run the Streamlit app — upload a file and ask questions on a web page:
+```bash
+streamlit run app.py        # then open http://localhost:8501
+```
+
 ### Example
 ```
-You: what was the total collection for the month?
-Bot: Total collection for October 2026 was 144.53 crore, which was 100% of plan.
+You: summarize this document
+Bot: The document describes ... (a short grounded summary)
 
-You: which office had the highest collection?
-Bot: WB had the highest collection at 12.27 crore.
+You: what is the value for item X?
+Bot: The value for item X is ...
 ```
 
 ## Project structure
 ```
 rag-document-qa/
-├── main.py            # entry point + chat loop
+├── main.py            # command-line entry point + chat loop
+├── app.py             # Streamlit web UI (upload + ask in the browser)
 ├── loader.py          # read PDF / Excel / CSV / text into raw text
 ├── rag.py             # chunk, embed, index, retrieve, answer (the RAG engine)
+├── Modelfile          # imports a local GGUF model into Ollama
 ├── requirements.txt
 ├── .env.example       # LLM config template
 └── data/              # sample documents (fake data, safe to share)
