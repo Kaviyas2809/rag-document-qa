@@ -1,7 +1,7 @@
 # RAG Mini Project — Complete Notes
 
 _Document Q&A using Retrieval-Augmented Generation (RAG). Free, local, no paid API._
-_Author: Kaviya Dharshini S — D&AI, TVS Motor._
+_Author: Kaviya Dharshini S _
 
 ---
 
@@ -142,11 +142,3 @@ python main.py --file data/sample_sales.csv
 (Ollama must be running, and the qwen-rag model present: check with `ollama list`.)
 
 ---
-
-## 11. Manager Q&A cheat-sheet
-- "Does it hallucinate?" -> No; it answers only from retrieved document text, else says it couldn't find it.
-- "Is it free?" -> Yes; local Qwen 2.5 via Ollama, no API cost.
-- "Does data leave the machine?" -> No; everything runs locally/offline.
-- "Where did the RAG certification apply?" -> This is the hands-on implementation: embeddings, vector
-  search, retrieval, grounded generation.
-- "Limits / next steps?" -> Bigger model for number reasoning; voice + NL-to-SQL agent for data questions.
