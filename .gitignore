@@ -1,0 +1,15 @@
+# Secrets — never push your real API key
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Saved vector index (regenerated from the document)
+*.faiss
+index/
+
+# Downloaded model file — too large for git; recreate via the README steps
+*.gguf

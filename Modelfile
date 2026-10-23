@@ -1,0 +1,4 @@
+# Modelfile — imports a locally-downloaded GGUF model into Ollama.
+# This avoids Ollama's blob CDN (which is throttled on this machine) by using
+# a model file downloaded from Hugging Face instead.
+FROM ./qwen0.5b.gguf

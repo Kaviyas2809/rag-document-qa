@@ -1,0 +1,14 @@
+# ---- Core RAG libraries ----
+pypdf==5.1.0                 # read text out of PDF files
+sentence-transformers==3.3.1 # turn text into embeddings (vectors) — runs LOCAL & FREE
+faiss-cpu==1.9.0             # vector store: stores vectors and finds similar ones fast
+numpy==1.26.4                # math/array support (used by faiss & embeddings)
+pandas==2.2.3                # read Excel/CSV into rows
+openpyxl==3.1.5              # lets pandas open .xlsx files
+xlrd==2.0.1                 # lets pandas open OLD .xls files
+
+# ---- The LLM that writes the final answer (pick ONE at runtime) ----
+openai==1.57.0               # if you use OpenAI (needs an API key)
+# Ollama needs no python package for our use — we call it via the openai client pointed at localhost
+python-dotenv==1.0.1         # loads your API key from a .env file so it's not hard-coded
+streamlit==1.41.1            # simple web UI — upload a file and ask questions in the browser
